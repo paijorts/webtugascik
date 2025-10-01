@@ -173,7 +173,7 @@ p, h1 {
     backdrop-filter: blur(12.3px);
     -webkit-backdrop-filter: blur(12.3px);
     border: 1px solid rgba(120, 120, 120, 0.68);
-    width: 400px;
+    width: 50%;
     text-align: left;
     padding: 30px 28px 30px 28px;
     transition: transform 0.2s, box-shadow 0.5s;
@@ -407,3 +407,4 @@ input::placeholder {
     gap: 20px;
 
 }
+
