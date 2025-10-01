@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gradient-background">
+<header>
+    <h1><b>Paijo's Blog</b></h1>
+    <nav>
+        <ul>
+            <li><a href="webberanda.html"><b>Beranda</b></a></li>
+            <div class="dropdown">
+                <a href=""><b>Menu</b></a>
+                <div class="dropdown-content">
+                    <a href="page2.html">Jadwal</a>
+                    <a href="page3.html">Favorite Song</a>
+                    <a href="page4.html">Menghitung</a>
+                    <a href="page1.html">Tentang Saya</a>
+                    <a href="https://linktr.ee/faizmrizkyj">Contact</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+</header>
+<div class="wrapperhitung">
+<div class="containerhitung">
+    <h1>Hitung Luas Persegi Panjang</h1>
+    <form id="luasform">
+        <div class="isiform">
+            <label for="panjang">Panjang</label>
+            <input type="number" id="panjang" placeholder="Masukkan panjang" required>
+        </div>
+        <div class="isiform">
+            <label for="lebar">Lebar</label>
+            <input type="number" id="lebar" placeholder="Masukkan lebar" required>
+        </div>
+        <div class="anjaibutt">
+            <button type="submit" class="butt">Hitung</button>
+        </div>
+        <div class="hasilgaib">
+            <h5>Hasil:</h5>
+            <p id="hasil">-</p>
+        </div>
+    </form>
+</div>
+
+<div class="containerhitung">
+    <h1>Hitung Volume Balok</h1>
+    <form id="volumtot"> 
+        <div class="isiform">
+            <label for="panjangtot">Panjang</label>
+            <input type="number" id="panjangtot" placeholder="Masukkan panjang" required>
+        </div>
+        <div class="isiform">
+            <label for="lebartot">Lebar</label>
+            <input type="number" id="lebartot" placeholder="Masukkan lebar" required>
+        </div>
+        <div class="isiform">
+            <label for="tinggitot">Tinggi</label>
+            <input type="number" id="tinggitot" placeholder="Masukkan tinggi" required>
+        </div>
+        <div class="anjaibutt"> 
+            <button type="submit" class="butt" id="sumbittot">Hitung</button>
+        </div>
+        <div class="hasilgaib">
+            <h5>Hasil:</h5>
+            <p id="hasilvolum">-</p> 
+        </div>
+    </form>
+</div>
+</div>
+<script>
+    const form = document.getElementById("luasform");
+    const hasil = document.getElementById("hasil");
+    const formvolum = document.getElementById("volumtot");
+    const hasilvolum = document.getElementById("hasilvolum");
+
+    form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const panjang = parseFloat(document.getElementById("panjang").value);
+    const lebar = parseFloat(document.getElementById("lebar").value);
+
+        if (panjang > 0 && lebar > 0) {
+        const luas = panjang * lebar;
+        hasil.textContent = luas + " cm²";
+        } else {
+        hasil.textContent = "Masukkan angka yang valid!";
+        }
+        });
+
+    formvolum.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const panjang = parseFloat(document.getElementById("panjangtot").value);
+    const lebar = parseFloat(document.getElementById("lebartot").value);
+    const tinggi = parseFloat(document.getElementById("tinggitot").value);
+
+        if (panjang > 0 && lebar > 0 && tinggi > 0) {
+        const volume = panjang * lebar * tinggi;
+        hasilvolum.textContent = volume + " cm³";
+        } else {
+        hasilvolum.textContent = "Masukkan angka yang valid!";
+        }
+    });
+</script>
+</body>
+</html>
